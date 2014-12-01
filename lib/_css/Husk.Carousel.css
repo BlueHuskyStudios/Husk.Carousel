@@ -1,0 +1,68 @@
+/* Husk.Carousel 1.0.0 basic CSS - http://BlueHuskyStudios.github.io/Husk.Carousel
+ * Copyright Blue Husky Programming ©2014 GPLv3
+ * 
+ * Requires that the browser has full CSS3 support. To be used in conjunction Husk.Carousel.js
+ */
+
+
+
+/***** BEGIN Basic styles *****/
+.husk-carousel {
+	/*max-width: 100%;*/
+}
+.hide-when-husk-carousel-supported {
+	display: none;
+}
+/***** END Basic styles *****/
+
+/***** BEGIN Carousel-specific styles *****/
+.husk-carousel {
+	overflow: hidden;
+	
+	/* .flex-* */
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+	
+	/* .flex-row */
+	-webkit-box-orient: horizontal;
+	   -moz-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	
+	/* .flex-horiz-stretch */
+	-webkit-align-content: stretch;
+	-ms-flex-line-pack: stretch;
+	align-content: stretch;
+	
+	/* .flex-vert-stretch */
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	
+	/* align like text */
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+	UL.husk-carousel,
+	OL.husk-carousel {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.husk-carousel>* {
+		/* don't grow, don't shrink, and make it 100% width of its parent */
+		flex: 0 0 100%;
+		left: 0%;
+		position: relative;
+		transition: left .25s ease;
+	}
+/***** END Carousel-specific styles *****/
